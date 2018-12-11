@@ -39,4 +39,7 @@ entity Table_test {
 
         @Comment : 'Text column for attribute DCUSCH02'
         "DCUSCH02___T"  : String(40);
+        
+        @Comment : 'Text column for attribute DCUSCH03'
+        "DCUSCH03___T"  : String(40);        
 };
