@@ -1,0 +1,16 @@
+ID: ADV_MODELING
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: DB_ADV_MODELING
+   type: hdb
+   path: DB_ADV_MODELING
+   requires:
+    - name: hdi_DB_ADV_MODELING
+
+resources:
+ - name: hdi_DB_ADV_MODELING
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
