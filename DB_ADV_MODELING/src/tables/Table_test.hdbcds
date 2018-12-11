@@ -1,0 +1,42 @@
+namespace ADV_MODELING.DB_ADV_MODELING.tables;
+
+entity Table_test {
+        @Comment : '0CUSTOMER number'
+    key "0CUSTOMER"     : String(10);
+
+        @Comment : 'Text column for attribute 0CUSTOMER'
+        "0CUSTOMER___T" : String(40);
+
+        @Comment : 'Source system ID'
+    key "0SOURSYSTEM"   : String(2);
+
+        @Comment : '0COUNTRY'
+        "0COUNTRY"      : String(3);
+
+        @Comment : 'Text column for attribute 0COUNTRY'
+        "0COUNTRY___T"  : String(20);
+
+        @Comment : 'Postal Code'
+        "0POSTAL_CD"    : String(10);
+
+        @Comment : 'Street'
+        "0STREET"       : String(35);
+
+        @Comment : 'City'
+        "0CITY"         : String(35);
+
+        @Comment : 'Phone Number'
+        "0PHONE"        : String(16);
+
+        @Comment : '0CUSTOMER Channel 1'
+        "DCUSCH01"      : String(2);
+
+        @Comment : 'Text column for attribute DCUSCH01'
+        "DCUSCH01___T"  : String(40);
+
+        @Comment : '0CUSTOMER Channel 2'
+        "DCUSCH02"      : String(2);
+
+        @Comment : 'Text column for attribute DCUSCH02'
+        "DCUSCH02___T"  : String(40);
+};
