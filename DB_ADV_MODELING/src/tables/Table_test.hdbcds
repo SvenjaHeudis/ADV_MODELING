@@ -48,5 +48,8 @@ entity Table_test {
 
         @Comment : '0CUSTOMER Channel 6'
         "DCUSCH06"      : String(2);  
+
+        @Comment : '0CUSTOMER Channel 7'
+        "DCUSCH07"      : String(2); 
      
 };
