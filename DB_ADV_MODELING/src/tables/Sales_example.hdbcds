@@ -1,0 +1,45 @@
+namespace ADV_MODELING.DB_ADV_MODELING.tables;
+
+entity sales_channel_md {
+    key sales_channel_key  : Integer;
+        sales_channel_text : String(40);
+};
+
+entity region_md {
+    key region_key  : Integer;
+        region_text : String(40);
+};
+
+entity order_priority_md {
+    key order_priotity_key  : String(1);
+        order_priority_text : String(40);
+};
+
+entity item_type_md {
+    key item_type_key  : Integer;
+        item_type_text : String(40);
+};
+
+entity sales_normalized {
+    @Comment : 'Region'
+    region_key         : Integer;
+    country            : String(40);
+    item_type_key      : Integer;
+    sales_channel_key  : Integer;
+    order_priotity_key : String(1);
+    order_date_from    : LocalDate;
+    o_day              : Integer;
+    o_month            : Integer;
+    o_year             : Integer;
+    order_id           : String(10);
+    ship_date2_format  : LocalDate;
+    s_day              : Integer;
+    s_month            : Integer;
+    s_year             : Integer;
+    units_sold         : Decimal(17, 2);
+    unit_price         : Decimal(17, 2);
+    unit_cost          : Decimal(17, 2);
+    total_revenue      : Decimal(17, 2);
+    total_cost         : Decimal(17, 2);
+    total_profit       : Decimal(17, 2);
+};
