@@ -37,9 +37,13 @@ entity Table_test {
         @Comment : '0CUSTOMER Channel 2'
         "DCUSCH02"      : String(2);
 
-        @Comment : 'Text column for attribute DCUSCH02'
-        "DCUSCH02___T"  : String(40);
-        
-        @Comment : 'Text column for attribute DCUSCH03'
-        "DCUSCH03___T"  : String(40);        
+        @Comment : '0CUSTOMER Channel 3'
+        "DCUSCH03"      : String(2);
+
+        @Comment : '0CUSTOMER Channel 4'
+        "DCUSCH04"      : String(2);        
+
+        @Comment : '0CUSTOMER Channel 5'
+        "DCUSCH05"      : String(2);   
+     
 };
