@@ -1,0 +1,6 @@
+namespace ADV_MODELING.DB_ADV_MODELING.tables;
+
+entity test {
+    key sales_channel_key  : Integer;
+        sales_channel_text : String(40);
+};
