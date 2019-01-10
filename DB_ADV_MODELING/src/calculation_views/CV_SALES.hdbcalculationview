@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="ADV_MODELING.DB_ADV_MODELING.calculation_views::CV_SALES" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Sales"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ADV_MODELING.DB_ADV_MODELING.tables::sales_normalized">
+    <resourceUri>ADV_MODELING.DB_ADV_MODELING.tables::sales_normalized</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="region_key">
+        <descriptions defaultDescription="Region"/>
+      </viewAttribute>
+      <viewAttribute id="country">
+        <descriptions defaultDescription="country"/>
+      </viewAttribute>
+      <viewAttribute id="item_type_key">
+        <descriptions defaultDescription="item_type_key"/>
+      </viewAttribute>
+      <viewAttribute id="sales_channel_key">
+        <descriptions defaultDescription="sales_channel_key"/>
+      </viewAttribute>
+      <viewAttribute id="order_priotity_key">
+        <descriptions defaultDescription="order_priotity_key"/>
+      </viewAttribute>
+      <viewAttribute id="order_date_from">
+        <descriptions defaultDescription="order_date_from"/>
+      </viewAttribute>
+      <viewAttribute id="o_day">
+        <descriptions defaultDescription="o_day"/>
+      </viewAttribute>
+      <viewAttribute id="o_month">
+        <descriptions defaultDescription="o_month"/>
+      </viewAttribute>
+      <viewAttribute id="o_year">
+        <descriptions defaultDescription="o_year"/>
+      </viewAttribute>
+      <viewAttribute id="order_id">
+        <descriptions defaultDescription="order_id"/>
+      </viewAttribute>
+      <viewAttribute id="ship_date2_format">
+        <descriptions defaultDescription="ship_date2_format"/>
+      </viewAttribute>
+      <viewAttribute id="s_day">
+        <descriptions defaultDescription="s_day"/>
+      </viewAttribute>
+      <viewAttribute id="s_month">
+        <descriptions defaultDescription="s_month"/>
+      </viewAttribute>
+      <viewAttribute id="s_year">
+        <descriptions defaultDescription="s_year"/>
+      </viewAttribute>
+      <viewAttribute id="units_sold">
+        <descriptions defaultDescription="units_sold"/>
+      </viewAttribute>
+      <viewAttribute id="unit_price">
+        <descriptions defaultDescription="unit_price"/>
+      </viewAttribute>
+      <viewAttribute id="unit_cost">
+        <descriptions defaultDescription="unit_cost"/>
+      </viewAttribute>
+      <viewAttribute id="total_revenue">
+        <descriptions defaultDescription="total_revenue"/>
+      </viewAttribute>
+      <viewAttribute id="total_cost">
+        <descriptions defaultDescription="total_cost"/>
+      </viewAttribute>
+      <viewAttribute id="total_profit">
+        <descriptions defaultDescription="total_profit"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="ADV_MODELING.DB_ADV_MODELING.tables::sales_normalized">
+      <mapping xsi:type="Calculation:AttributeMapping" target="region_key" source="region_key"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="country" source="country"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="item_type_key" source="item_type_key"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="sales_channel_key" source="sales_channel_key"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="order_priotity_key" source="order_priotity_key"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="order_date_from" source="order_date_from"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="o_day" source="o_day"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="o_month" source="o_month"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="o_year" source="o_year"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="order_id" source="order_id"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ship_date2_format" source="ship_date2_format"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="s_day" source="s_day"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="s_month" source="s_month"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="s_year" source="s_year"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="units_sold" source="units_sold"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="unit_price" source="unit_price"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="unit_cost" source="unit_cost"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="total_revenue" source="total_revenue"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="total_cost" source="total_cost"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="total_profit" source="total_profit"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="region_key" order="1" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Region"/>
+      <keyMapping columnObjectName="Projection_1" columnName="region_key"/>
+    </attribute>
+    <attribute id="country" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="country"/>
+      <keyMapping columnObjectName="Projection_1" columnName="country"/>
+    </attribute>
+    <attribute id="item_type_key" order="3" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="item_type_key"/>
+      <keyMapping columnObjectName="Projection_1" columnName="item_type_key"/>
+    </attribute>
+    <attribute id="sales_channel_key" order="4" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="sales_channel_key"/>
+      <keyMapping columnObjectName="Projection_1" columnName="sales_channel_key"/>
+    </attribute>
+    <attribute id="order_priotity_key" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="order_priotity_key"/>
+      <keyMapping columnObjectName="Projection_1" columnName="order_priotity_key"/>
+    </attribute>
+    <attribute id="order_date_from" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="order_date_from"/>
+      <keyMapping columnObjectName="Projection_1" columnName="order_date_from"/>
+    </attribute>
+    <attribute id="o_day" order="7" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="o_day"/>
+      <keyMapping columnObjectName="Projection_1" columnName="o_day"/>
+    </attribute>
+    <attribute id="o_month" order="8" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="o_month"/>
+      <keyMapping columnObjectName="Projection_1" columnName="o_month"/>
+    </attribute>
+    <attribute id="o_year" order="9" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="o_year"/>
+      <keyMapping columnObjectName="Projection_1" columnName="o_year"/>
+    </attribute>
+    <attribute id="order_id" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="order_id"/>
+      <keyMapping columnObjectName="Projection_1" columnName="order_id"/>
+    </attribute>
+    <attribute id="ship_date2_format" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ship_date2_format"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ship_date2_format"/>
+    </attribute>
+    <attribute id="s_day" order="12" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="s_day"/>
+      <keyMapping columnObjectName="Projection_1" columnName="s_day"/>
+    </attribute>
+    <attribute id="s_month" order="13" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="s_month"/>
+      <keyMapping columnObjectName="Projection_1" columnName="s_month"/>
+    </attribute>
+    <attribute id="s_year" order="14" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="s_year"/>
+      <keyMapping columnObjectName="Projection_1" columnName="s_year"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="units_sold" order="15" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="units_sold"/>
+      <measureMapping columnObjectName="Projection_1" columnName="units_sold"/>
+    </measure>
+    <measure id="unit_price" order="16" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="unit_price"/>
+      <measureMapping columnObjectName="Projection_1" columnName="unit_price"/>
+    </measure>
+    <measure id="unit_cost" order="17" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="unit_cost"/>
+      <measureMapping columnObjectName="Projection_1" columnName="unit_cost"/>
+    </measure>
+    <measure id="total_revenue" order="18" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="total_revenue"/>
+      <measureMapping columnObjectName="Projection_1" columnName="total_revenue"/>
+    </measure>
+    <measure id="total_cost" order="19" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="total_cost"/>
+      <measureMapping columnObjectName="Projection_1" columnName="total_cost"/>
+    </measure>
+    <measure id="total_profit" order="20" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="total_profit"/>
+      <measureMapping columnObjectName="Projection_1" columnName="total_profit"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="211"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
