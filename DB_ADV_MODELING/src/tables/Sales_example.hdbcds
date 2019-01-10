@@ -23,6 +23,7 @@ entity item_type_md {
 entity sales_normalized {
     @Comment : 'Region'
     region_key         : Integer;
+    @Comment : 'Country'
     country            : String(40);
     item_type_key      : Integer;
     sales_channel_key  : Integer;
