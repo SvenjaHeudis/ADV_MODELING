@@ -25,6 +25,7 @@ entity sales_normalized {
     region_key         : Integer;
     @Comment : 'Country'
     country            : String(40);
+    @Comment : 'Item'
     item_type_key      : Integer;
     sales_channel_key  : Integer;
     order_priotity_key : String(1);
